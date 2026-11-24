@@ -275,20 +275,18 @@
         <!-- Video 2: Short-Form Reel / Youth Protest Briefing -->
         <div class="video-card">
           <div class="video-player-wrapper">
-            <div class="video-overlay" id="videoOverlay-2" onclick="playCustomVideo('v2')">
-              <img src="https://images.unsplash.com/photo-1526976668912-1a811878dd37?w=800&auto=format&fit=crop&q=80" alt="Women Safety Protest" class="video-poster">
-              <div class="play-button"><i class="fa-solid fa-play"></i></div>
-              <span class="video-duration">01:30</span>
-            </div>
-            <iframe id="videoIframe-2" class="video-frame" style="display:none;" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <video id="localVideoPlayer" class="video-frame" controls playsinline preload="metadata" style="width: 100%; height: 100%; object-fit: cover;">
+              <source src="assets/videos/simmi_diwakar_interview.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div class="video-details">
-            <span class="tag-video">Short-Form Reel · Civic Action</span>
+            <span class="tag-video">Official Video · Field Investigation</span>
             <h4>Women's Safety Is Not a Privilege: Delhi Protest Field Report</h4>
             <p>"Through this interview, we explored the ongoing women's protest, public concerns, and the need for strict police action and accountability."</p>
             <div class="video-meta">
-              <span><i class="fa-solid fa-shield-cat"></i> Field Coverage</span>
-              <span style="color:var(--accent-crimson); font-weight:600;"><i class="fa-solid fa-video"></i> Vertical Reel</span>
+              <span><i class="fa-solid fa-user-shield"></i> Simmi Diwakar</span>
+              <span style="color:var(--accent-crimson); font-weight:600;"><i class="fa-solid fa-play"></i> Watch Full Clip</span>
             </div>
           </div>
         </div>
