@@ -1873,3 +1873,35 @@ img {
     gap: 8px;
   }
 }
+
+.direct-email-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 1px solid rgba(224, 76, 56, 0.25);
+  transition: all 0.2s ease;
+  word-break: break-all;
+}
+.direct-email-badge:hover {
+  background: var(--accent);
+  color: #fff;
+}
+.email-routing-notice {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+}
+.email-routing-notice i {
+  color: var(--accent);
+}

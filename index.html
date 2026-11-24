@@ -205,9 +205,12 @@
             <span style="font-size:0.8rem; color:var(--text-muted); font-family:var(--font-mono);">Journalist & Host</span>
           </div>
         </div>
-        <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.55;">
+        <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.55; margin-bottom:12px;">
           Leading independent research, podcasts, and student movement documentation on Beyond The Noise. Focused on civic safety, educational accountability, and technology governance.
         </p>
+        <a href="mailto:simmidiwakar18@gmail.com" class="direct-email-badge">
+          <i class="fa-solid fa-envelope"></i> simmidiwakar18@gmail.com
+        </a>
       </div>
 
       <!-- Short Form Video Capsule -->
@@ -224,11 +227,16 @@
       <div class="sidebar-card subscribe-card" id="subscribe">
         <div class="card-badge">Dispatch Alerts</div>
         <h3>Stay Connected With Simmi's Work</h3>
-        <p>Direct updates on new podcasts, investigative field reports, and civic safety audits.</p>
-        <form class="subscribe-form" onsubmit="handleSubscribe(event)">
-          <input type="email" id="subscriberEmail" placeholder="your.email@domain.com" required>
-          <button type="submit" class="btn-submit">Subscribe Free</button>
+        <p>Direct updates on new podcasts, investigative field reports, and civic safety audits. Submissions forwarded directly to Simmi Diwakar.</p>
+        <form class="subscribe-form" id="subscribeForm" action="https://formsubmit.co/simmidiwakar18@gmail.com" method="POST" onsubmit="handleSubscribe(event)">
+          <input type="hidden" name="_subject" value="New Beyond The Noise Subscriber / Dispatch Alert!">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="email" name="email" id="subscriberEmail" placeholder="your.email@domain.com" required>
+          <button type="submit" class="btn-submit">Subscribe for Updates</button>
         </form>
+        <div class="email-routing-notice">
+          <i class="fa-solid fa-bell"></i> Alerts directed to: <strong>simmidiwakar18@gmail.com</strong>
+        </div>
         <span class="privacy-note"><i class="fa-solid fa-shield-halved"></i> 100% Free. Independent journalism. Zero spam.</span>
       </div>
 

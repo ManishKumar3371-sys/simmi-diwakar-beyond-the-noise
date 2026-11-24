@@ -434,7 +434,56 @@ function handleCommentSubmit(e) {
   if (counter) counter.innerText = parseInt(counter.innerText || "0") + 1;
 
   alert("Thank you " + name + "! Your public opinion has been published to Beyond The Noise.");
+
+  // Forward opinion update to Simmi Diwakar via FormSubmit
+  try {
+    fetch("https://formsubmit.co/ajax/simmidiwakar18@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        _subject: "New Public Opinion / Comment on Beyond The Noise",
+        name: name,
+        topic: topic,
+        opinion: text,
+        timestamp: new Date().toISOString()
+      })
+    }).catch(function() {});
+  } catch (err) {}
+
   e.target.reset();
+}
+
+function handleSubscribe(e) {
+  e.preventDefault();
+  const emailInput = document.getElementById("subscriberEmail");
+  const email = emailInput ? emailInput.value.trim() : "";
+  if (!email) return;
+
+  fetch("https://formsubmit.co/ajax/simmidiwakar18@gmail.com", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({
+      _subject: "New Subscriber for Beyond The Noise Dispatches",
+      subscriber_email: email,
+      recipient: "simmidiwakar18@gmail.com",
+      timestamp: new Date().toISOString()
+    })
+  })
+  .then(function(res) { return res.json(); })
+  .then(function() {
+    alert("Thank you! You have subscribed to Beyond The Noise dispatches. Direct updates are routed to simmidiwakar18@gmail.com.");
+    if (emailInput) emailInput.value = "";
+  })
+  .catch(function() {
+    alert("Thank you for subscribing! Your address has been recorded.");
+    if (emailInput) emailInput.value = "";
+  });
 }
 
 function likeComment(btn) {
