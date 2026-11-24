@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyond The Noise — Simmi Diwakar | Journalism & Research</title>
+  <meta name="description" content="Independent journalism, student investigations, and technology conversations by Simmi Diwakar. Cutting through the noise with grounded reporting.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-ticker">
+    <div class="container ticker-flex">
+      <span class="ticker-badge"><i class="fa-solid fa-circle-dot"></i> Special Feature</span>
+      <p class="ticker-text">New Investigation: "From Memes to Movements" & Special Safety Audit on Student PGs published.</p>
+      <a href="#articles" class="ticker-link">Read Dispatches →</a>
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand-logo">
+        <span class="logo-mark">///</span>
+        <div class="logo-text">
+          <span class="logo-title">Beyond The Noise</span>
+          <span class="logo-tagline">Simmi Diwakar · Independent Journal</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#articles" class="nav-link active">Articles</a>
+        <a href="#podcast" class="nav-link">Podcast & Video</a>
+        <a href="#reports" class="nav-link">Special Reports</a>
+        <a href="#about" class="nav-link">Editorial Creed</a>
+        <a href="#subscribe" class="nav-cta">Subscribe</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle dark/light mode">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Editorial Masthead -->
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-meta">
+        <span class="category-pill">Lead Editorial · Youth Culture & Movements</span>
+        <span class="publish-date">Field Investigation & Digital Activism</span>
+      </div>
+      <h1 class="hero-headline">From Memes to Movements: How Gen Z Is Using the Internet to Organise Protests</h1>
+      <p class="hero-lead">How digital platforms, humorous satire, and viral reels are turning online culture into genuine collective street action across India's student-led demonstrations.</p>
+      
+      <div class="hero-byline">
+        <div class="author-avatar">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Simmi Diwakar">
+        </div>
+        <div class="author-info">
+          <strong>Simmi Diwakar (Curator & Editorial Lead)</strong>
+          <span>Original Research by Kinjal Verma · Youth Movements Desk</span>
+        </div>
+        <div class="hero-actions">
+          <button class="btn-read" onclick="openArticleModal('memes-to-movements')"><i class="fa-solid fa-book-open"></i> Read Full Dispatch</button>
+          <a href="#podcast" class="btn-watch-teaser"><i class="fa-solid fa-headphones"></i> Listen Podcast</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Topic Strip -->
+  <section class="topic-strip">
+    <div class="container">
+      <div class="filter-pills">
+        <button class="pill active" data-filter="all">All Dispatches</button>
+        <button class="pill" data-filter="movements">Youth Movements</button>
+        <button class="pill" data-filter="safety">Civic & Safety Audits</button>
+        <button class="pill" data-filter="tech-career">Tech & Cloud Career</button>
+        <button class="pill" data-filter="reports">Special Dossiers</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Grid -->
+  <main class="container main-layout">
+    
+    <!-- Left Column: Articles & Feeds -->
+    <section class="feed-column" id="articles">
+      <div class="section-title-wrap">
+        <h2>Published Dispatches</h2>
+        <span class="subtext">Documented evidence, civic investigations, and youth-driven analyses.</span>
+      </div>
+
+      <div class="articles-list" id="articlesList">
+        
+        <!-- Document 1: Memes to Movements -->
+        <article class="article-card" data-category="movements">
+          <div class="article-content">
+            <div class="article-meta">
+              <span class="tag">Digital Activism</span>
+              <span class="dot">·</span>
+              <span class="time">7 min read</span>
+              <span class="dot">·</span>
+              <span class="date">Report by Kinjal Verma</span>
+            </div>
+            <h3 class="article-title">
+              <a href="javascript:void(0)" onclick="openArticleModal('memes-to-movements')">From Memes to Movements: How Gen Z Is Using the Internet to Organise Protests</a>
+            </h3>
+            <p class="article-excerpt">In Delhi, young protesters used humour, memes, and the Cockroach Janta Party satire to expose paper leaks and women's safety concerns. How online conversations bridge the gap between screens and streets.</p>
+            <div class="article-footer">
+              <span class="author-tag">By Kinjal Verma · Curated by Simmi Diwakar</span>
+              <div class="card-links">
+                <span class="badge-link"><i class="fa-solid fa-fire"></i> Trending Field Study</span>
+                <span class="read-more" onclick="openArticleModal('memes-to-movements')">Read Full Dispatch →</span>
+              </div>
+            </div>
+          </div>
+          <div class="article-thumbnail">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&auto=format&fit=crop&q=80" alt="Student protests">
+          </div>
+        </article>
+
+        <!-- Document 2: Delhi Student PGs Safety Audit -->
+        <article class="article-card" data-category="safety">
+          <div class="article-content">
+            <div class="article-meta">
+              <span class="tag">Civic Safety Audit</span>
+              <span class="dot">·</span>
+              <span class="time">6 min read</span>
+              <span class="dot">·</span>
+              <span class="date">Report by Divyam</span>
+            </div>
+            <h3 class="article-title">
+              <a href="javascript:void(0)" onclick="openArticleModal('safer-pgs')">Safer PGs for Students? Delhi’s Safety Measures Face a Crucial Test</a>
+            </h3>
+            <p class="article-excerpt">Following the tragic Satya Niketan building collapse claiming five student lives, we examine proposed PG regulations, police verification loopholes, and why safe housing is a fundamental student right.</p>
+            <div class="article-footer">
+              <span class="author-tag">By Divyam · Editorial Oversight by Simmi Diwakar</span>
+              <div class="card-links">
+                <a href="#reports" class="badge-link"><i class="fa-solid fa-file-pdf"></i> Satya Niketan Case File</a>
+                <span class="read-more" onclick="openArticleModal('safer-pgs')">Read Full Dispatch →</span>
+              </div>
+            </div>
+          </div>
+          <div class="article-thumbnail">
+            <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?w=400&auto=format&fit=crop&q=80" alt="Urban building safety">
+          </div>
+        </article>
+
+        <!-- Document 3: Podcast Transcript Highlight -->
+        <article class="article-card" data-category="tech-career">
+          <div class="article-content">
+            <div class="article-meta">
+              <span class="tag">Tech Leadership</span>
+              <span class="dot">·</span>
+              <span class="time">12 min interview</span>
+              <span class="dot">·</span>
+              <span class="date">Hosted by Simmi & Aashbhi</span>
+            </div>
+            <h3 class="article-title">
+              <a href="javascript:void(0)" onclick="openArticleModal('podcast-interview')">Navigating 20 Years in Cloud & AI: In Conversation with Praveen (Senior AWS Cloud Architect, HCLTech)</a>
+            </h3>
+            <p class="article-excerpt">Simmi and Aashbhi interview Praveen on stepping out of comfort zones, British Telecom career milestones, customer empathy in cloud architecture, and the realistic truth behind corporate pressure.</p>
+            <div class="article-footer">
+              <span class="author-tag">Hosts: Simmi Diwakar & Aashbhi</span>
+              <div class="card-links">
+                <a href="#podcast" class="badge-link"><i class="fa-solid fa-microphone"></i> Audio/Video Available</a>
+                <span class="read-more" onclick="openArticleModal('podcast-interview')">Read Transcript →</span>
+              </div>
+            </div>
+          </div>
+          <div class="article-thumbnail">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&auto=format&fit=crop&q=80" alt="Tech Cloud Interview">
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Right Column: Curated Sidebar -->
+    <aside class="sidebar-column">
+      
+      <!-- Host & Curator Bio -->
+      <div class="sidebar-card">
+        <div class="card-badge">Editorial Desk</div>
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Simmi Diwakar" style="width:52px; height:52px; border-radius:50%; object-fit:cover; border:2px solid var(--text-accent);">
+          <div>
+            <h4 style="font-family: var(--font-serif); font-size:1.15rem; color:var(--text-main);">Simmi Diwakar</h4>
+            <span style="font-size:0.8rem; color:var(--text-muted); font-family:var(--font-mono);">Journalist & Host</span>
+          </div>
+        </div>
+        <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.55;">
+          Leading independent research, podcasts, and student movement documentation on Beyond The Noise. Focused on civic safety, educational accountability, and technology governance.
+        </p>
+      </div>
+
+      <!-- Short Form Video Capsule -->
+      <div class="sidebar-card" style="border-left: 3px solid var(--accent-crimson);">
+        <span class="card-badge" style="color: var(--accent-crimson);">Short-Form Reel Spotlight</span>
+        <h4 style="font-family:var(--font-serif); font-size:1.15rem; margin-bottom:8px;">"Women's Safety Is a Right, Not a Privilege"</h4>
+        <p style="font-size:0.88rem; color:var(--text-secondary); margin-bottom:12px; font-style:italic;">
+          "Through this interview, we explored the ongoing women's protest, public concerns, and the need for strict police action and accountability. Because every woman deserves to feel safe, heard, and protected."
+        </p>
+        <span style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono);"><i class="fa-solid fa-hashtag"></i> StudentsDemandSafety · Delhi 2026</span>
+      </div>
+
+      <!-- Newsletter Box -->
+      <div class="sidebar-card subscribe-card" id="subscribe">
+        <div class="card-badge">Dispatch Alerts</div>
+        <h3>Stay Connected With Simmi's Work</h3>
+        <p>Direct updates on new podcasts, investigative field reports, and civic safety audits.</p>
+        <form class="subscribe-form" onsubmit="handleSubscribe(event)">
+          <input type="email" id="subscriberEmail" placeholder="your.email@domain.com" required>
+          <button type="submit" class="btn-submit">Subscribe Free</button>
+        </form>
+        <span class="privacy-note"><i class="fa-solid fa-shield-halved"></i> 100% Free. Independent journalism. Zero spam.</span>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <!-- Video Essays & Podcast Section -->
+  <section class="videos-section" id="podcast">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="flex-between">
+          <div>
+            <span class="section-kicker">Broadcasts & Podcasts</span>
+            <h2>Interviews, Podcasts & Short-Form Video</h2>
+          </div>
+          <button class="btn-outline" onclick="openAddVideoModal()"><i class="fa-solid fa-plus"></i> Add Video / Reel Embed</button>
+        </div>
+        <p class="subtext">Watch or listen to our deep-dive interviews and visual video journalism.</p>
+      </div>
+
+      <div class="videos-grid" id="videosGrid">
+        
+        <!-- Video 1: Podcast Interview with Praveen -->
+        <div class="video-card">
+          <div class="video-player-wrapper">
+            <div class="video-overlay" id="videoOverlay-1" onclick="playCustomVideo('v1')">
+              <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&auto=format&fit=crop&q=80" alt="Podcast Studio" class="video-poster">
+              <div class="play-button"><i class="fa-solid fa-play"></i></div>
+              <span class="video-duration">11:08</span>
+            </div>
+            <iframe id="videoIframe-1" class="video-frame" style="display:none;" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="video-details">
+            <span class="tag-video">Podcast Episode 01 · Tech Leadership</span>
+            <h4>Cloud Solutions, AI, & Navigating Corporate Pressure with Praveen (HCLTech)</h4>
+            <p>Hosted by Simmi and Aashbhi. A 20-year career perspective covering British Telecom, AWS cloud transitions, and honest reflections on leaving comfort zones.</p>
+            <div class="video-meta">
+              <span><i class="fa-solid fa-microphone-lines"></i> Simmi & Aashbhi</span>
+              <button class="read-more" style="background:none; border:none; padding:0;" onclick="openArticleModal('podcast-interview')">Read Full Transcript →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 2: Short-Form Reel / Youth Protest Briefing -->
+        <div class="video-card">
+          <div class="video-player-wrapper">
+            <div class="video-overlay" id="videoOverlay-2" onclick="playCustomVideo('v2')">
+              <img src="https://images.unsplash.com/photo-1526976668912-1a811878dd37?w=800&auto=format&fit=crop&q=80" alt="Women Safety Protest" class="video-poster">
+              <div class="play-button"><i class="fa-solid fa-play"></i></div>
+              <span class="video-duration">01:30</span>
+            </div>
+            <iframe id="videoIframe-2" class="video-frame" style="display:none;" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="video-details">
+            <span class="tag-video">Short-Form Reel · Civic Action</span>
+            <h4>Women's Safety Is Not a Privilege: Delhi Protest Field Report</h4>
+            <p>"Through this interview, we explored the ongoing women's protest, public concerns, and the need for strict police action and accountability."</p>
+            <div class="video-meta">
+              <span><i class="fa-solid fa-shield-cat"></i> Field Coverage</span>
+              <span style="color:var(--accent-crimson); font-weight:600;"><i class="fa-solid fa-video"></i> Vertical Reel</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Reports & Whitepapers Section -->
+  <section class="reports-section" id="reports">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="flex-between">
+          <div>
+            <span class="section-kicker">Verified Documentation</span>
+            <h2>Case Studies & Special Investigation Files</h2>
+          </div>
+          <button class="btn-outline" onclick="openAddReportModal()"><i class="fa-solid fa-file-circle-plus"></i> Upload Document / File</button>
+        </div>
+        <p class="subtext">Primary document briefs, case studies, and policy audits compiled by Simmi Diwakar and contributors.</p>
+      </div>
+
+      <div class="reports-grid" id="reportsGrid">
+        
+        <!-- Report 1: Delhi PG Safety Crisis -->
+        <div class="report-card">
+          <div class="report-icon"><i class="fa-solid fa-building-shield"></i></div>
+          <div class="report-content">
+            <div class="report-tags">
+              <span class="pill-mini">Civic Safety Case File</span>
+              <span class="file-size">PDF Dossier · 2 Pages</span>
+            </div>
+            <h4>Delhi PG Housing Safety & Satya Niketan Tragedy Audit</h4>
+            <p>Full investigation into paying-guest building inspections, mandatory fire clearances, emergency exits, and student tenant protections.</p>
+            <div class="report-actions">
+              <button class="btn-view-report" onclick="previewReport('rep-pg-safety')"><i class="fa-solid fa-eye"></i> View Summary</button>
+              <button class="btn-dl-report" onclick="openArticleModal('safer-pgs')"><i class="fa-solid fa-book-open"></i> Read Full Text</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Report 2: Gen Z Digital Activism Index -->
+        <div class="report-card">
+          <div class="report-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+          <div class="report-content">
+            <div class="report-tags">
+              <span class="pill-mini">Sociological Study</span>
+              <span class="file-size">Field Study · 6 Pages</span>
+            </div>
+            <h4>Digital Activism, Satire, & Student Mobilization in 2026</h4>
+            <p>From Cockroach Janta Party memes to Jantar Mantar rallies: analyzing the limits and power of citizen journalism and viral messaging.</p>
+            <div class="report-actions">
+              <button class="btn-view-report" onclick="previewReport('rep-memes')"><i class="fa-solid fa-eye"></i> View Summary</button>
+              <button class="btn-dl-report" onclick="openArticleModal('memes-to-movements')"><i class="fa-solid fa-book-open"></i> Read Full Text</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Report 3: Cloud Architecture Transition -->
+        <div class="report-card">
+          <div class="report-icon"><i class="fa-solid fa-cloud"></i></div>
+          <div class="report-content">
+            <div class="report-tags">
+              <span class="pill-mini">Technical Insights</span>
+              <span class="file-size">Transcript · 8 Pages</span>
+            </div>
+            <h4>Enterprise Cloud & AI Strategy (HCLTech / British Telecom)</h4>
+            <p>Detailed discussion transcript with Praveen on teamwork, customer problem-solving, and upgrading skills for cloud architects.</p>
+            <div class="report-actions">
+              <button class="btn-view-report" onclick="previewReport('rep-podcast')"><i class="fa-solid fa-eye"></i> View Summary</button>
+              <button class="btn-dl-report" onclick="openArticleModal('podcast-interview')"><i class="fa-solid fa-book-open"></i> Read Transcript</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial Creed / About Section -->
+  <section class="about-section" id="about">
+    <div class="container about-container">
+      <div class="about-lead">
+        <span class="section-kicker">Our Philosophy</span>
+        <h2>Why "Beyond The Noise"?</h2>
+        <p class="about-p">In an era where sensational headlines and short attention spans dominate the public sphere, <strong>Beyond The Noise</strong> exists to provide grounded, honest documentation.</p>
+        <p class="about-p">Curated by <strong>Simmi Diwakar</strong>, this platform highlights authentic student voices, investigates public safety crises, and shares meaningful technical dialogues that look past the algorithm.</p>
+      </div>
+
+      <div class="about-pillars">
+        <div class="pillar-box">
+          <div class="pillar-num">01</div>
+          <h4>People Over Algorithm</h4>
+          <p>We document ground realities—from student housing struggles to street demonstrations—without chasing sensational clickbait.</p>
+        </div>
+        <div class="pillar-box">
+          <div class="pillar-num">02</div>
+          <h4>Responsible Citizen Reporting</h4>
+          <p>We believe in verification before amplification: checking sources, dates, and authentic lived accounts.</p>
+        </div>
+        <div class="pillar-box">
+          <div class="pillar-num">03</div>
+          <h4>Real Solutions & Career Dialogue</h4>
+          <p>Bridging students and seasoned corporate leaders through thoughtful podcast discussions and transparent insights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <div class="footer-logo">
+          <span class="logo-mark">///</span> Beyond The Noise
+        </div>
+        <p class="footer-desc">An independent editorial and research platform curated by Simmi Diwakar. Dedicated to evidence, student voices, and depth over noise.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Editorial Sections</h5>
+        <ul>
+          <li><a href="#articles">Recent Dispatches</a></li>
+          <li><a href="#podcast">Podcast & Videos</a></li>
+          <li><a href="#reports">Special Reports</a></li>
+          <li><a href="#about">Editorial Creed</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Featured Investigations</h5>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="openArticleModal('memes-to-movements')">Memes to Movements</a></li>
+          <li><a href="javascript:void(0)" onclick="openArticleModal('safer-pgs')">Delhi PG Housing Safety</a></li>
+          <li><a href="javascript:void(0)" onclick="openArticleModal('podcast-interview')">Cloud Architecture Dialogue</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Journal Newsletter</h5>
+        <p class="footer-p-small">Receive our latest research dispatches and podcast episodes directly.</p>
+        <div class="status-pill-footer">
+          <span class="pulse-dot"></span> Simmi Diwakar Journal Active
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <p>© 2026 Beyond The Noise — Simmi Diwakar. Independent & Open Source.</p>
+    </div>
+  </footer>
+
+  <!-- MODAL: Full Article Reader -->
+  <div class="modal" id="articleModal">
+    <div class="modal-backdrop" onclick="closeModal('articleModal')"></div>
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('articleModal')">&times;</button>
+      <div class="modal-body" id="modalArticleBody">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Report Summary / Viewer -->
+  <div class="modal" id="reportModal">
+    <div class="modal-backdrop" onclick="closeModal('reportModal')"></div>
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('reportModal')">&times;</button>
+      <div class="modal-body" id="modalReportBody">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Add Custom Video -->
+  <div class="modal" id="addVideoModal">
+    <div class="modal-backdrop" onclick="closeModal('addVideoModal')"></div>
+    <div class="modal-card form-modal">
+      <button class="modal-close" onclick="closeModal('addVideoModal')">&times;</button>
+      <h3><i class="fa-solid fa-video"></i> Add Video / Reel Embed</h3>
+      <p class="subtext">Embed a YouTube / Vimeo URL, Instagram Reel, or link a custom video file.</p>
+      <form onsubmit="handleAddVideo(event)">
+        <div class="form-group">
+          <label>Video Title</label>
+          <input type="text" id="newVideoTitle" placeholder="e.g. Field Interview on Women Safety" required>
+        </div>
+        <div class="form-group">
+          <label>Video URL (YouTube Embed or direct MP4 link)</label>
+          <input type="url" id="newVideoUrl" placeholder="https://www.youtube.com/embed/... or reel embed" required>
+        </div>
+        <div class="form-group">
+          <label>Synopsis / Caption</label>
+          <textarea id="newVideoDesc" rows="3" placeholder="Description of the video content..." required></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Duration / Format</label>
+            <input type="text" id="newVideoDuration" placeholder="e.g. 01:30 or 15:40" required>
+          </div>
+          <div class="form-group">
+            <label>Tag / Badge</label>
+            <input type="text" id="newVideoTag" placeholder="e.g. Podcast, Reel, Documentary" required>
+          </div>
+        </div>
+        <button type="submit" class="btn-submit full-width">Publish Video to Platform</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: Add Custom Report -->
+  <div class="modal" id="addReportModal">
+    <div class="modal-backdrop" onclick="closeModal('addReportModal')"></div>
+    <div class="modal-card form-modal">
+      <button class="modal-close" onclick="closeModal('addReportModal')">&times;</button>
+      <h3><i class="fa-solid fa-file-circle-plus"></i> Publish Document / Report</h3>
+      <p class="subtext">Add a new investigative report, student brief, or document file.</p>
+      <form onsubmit="handleAddReport(event)">
+        <div class="form-group">
+          <label>Document Title</label>
+          <input type="text" id="newReportTitle" placeholder="e.g. Delhi Student Housing Assessment" required>
+        </div>
+        <div class="form-group">
+          <label>Tag / Classification</label>
+          <input type="text" id="newReportTag" placeholder="e.g. Civic Audit, Field Investigation" required>
+        </div>
+        <div class="form-group">
+          <label>Executive Summary / Details</label>
+          <textarea id="newReportAbstract" rows="4" placeholder="Overview of document findings..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Document Link or Filename</label>
+          <input type="text" id="newReportFile" placeholder="e.g. report.pdf or cloud link" value="simmi-diwakar-report.pdf" required>
+        </div>
+        <button type="submit" class="btn-submit full-width">Publish Document</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
