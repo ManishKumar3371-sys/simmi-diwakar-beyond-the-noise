@@ -356,3 +356,92 @@ function handleSubscribe(e) {
   alert(`Thank you for subscribing to Beyond The Noise (${email}).\nYou are now on Simmi Diwakar's dispatch alert list.`);
   e.target.reset();
 }
+// ========================================================
+// PUBLIC OPINION POLL & COMMENT SYSTEM
+// ========================================================
+let pollVotes = {
+  fire: 164,
+  police: 82,
+  rent: 96
+};
+
+function votePoll(choice) {
+  if (localStorage.getItem("btn_poll_voted")) {
+    alert("Thank you! You have already registered your vote in this week's poll.");
+    return;
+  }
+
+  pollVotes[choice] += 1;
+  localStorage.setItem("btn_poll_voted", choice);
+  updatePollUI();
+  alert("Your public vote has been recorded and verified.");
+}
+
+function updatePollUI() {
+  const total = pollVotes.fire + pollVotes.police + pollVotes.rent;
+  const pFire = Math.round((pollVotes.fire / total) * 100);
+  const pPolice = Math.round((pollVotes.police / total) * 100);
+  const pRent = 100 - pFire - pPolice;
+
+  const barFire = document.getElementById("bar-fire");
+  const pctFire = document.getElementById("pct-fire");
+  const barPolice = document.getElementById("bar-police");
+  const pctPolice = document.getElementById("pct-police");
+  const barRent = document.getElementById("bar-rent");
+  const pctRent = document.getElementById("pct-rent");
+  const countEl = document.getElementById("pollVoteCount");
+
+  if (barFire) barFire.style.width = pFire + "%";
+  if (pctFire) pctFire.innerText = pFire + "%";
+  if (barPolice) barPolice.style.width = pPolice + "%";
+  if (pctPolice) pctPolice.innerText = pPolice + "%";
+  if (barRent) barRent.style.width = pRent + "%";
+  if (pctRent) pctRent.innerText = pRent + "%";
+  if (countEl) countEl.innerHTML = '<i class="fa-solid fa-users"></i> ' + total + ' Verified Votes Recorded';
+}
+
+function handleCommentSubmit(e) {
+  e.preventDefault();
+  const name = document.getElementById("commenterName").value.trim();
+  const topic = document.getElementById("commentTopic").value;
+  const text = document.getElementById("commentText").value.trim();
+
+  if (!name || !text) return;
+
+  const list = document.getElementById("commentsList");
+  const counter = document.getElementById("commentCounter");
+
+  const newComment = document.createElement("div");
+  newComment.className = "comment-item";
+  newComment.innerHTML = 
+    '<div class="comment-top">' +
+      '<div class="commenter-meta">' +
+        '<span class="commenter-avatar"><i class="fa-solid fa-user-check"></i></span>' +
+        '<div>' +
+          '<strong>' + name + '</strong>' +
+          '<span class="comment-target"> on <em>' + topic + '</em></span>' +
+        '</div>' +
+      '</div>' +
+      '<span class="comment-time">Just now</span>' +
+    '</div>' +
+    '<p class="comment-body">' + text + '</p>' +
+    '<div class="comment-actions">' +
+      '<button class="like-btn" onclick="likeComment(this)"><i class="fa-regular fa-thumbs-up"></i> <span>1</span> Helpful</button>' +
+      '<span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Public Verified Opinion</span>' +
+    '</div>';
+
+  list.prepend(newComment);
+  if (counter) counter.innerText = parseInt(counter.innerText || "0") + 1;
+
+  alert("Thank you " + name + "! Your public opinion has been published to Beyond The Noise.");
+  e.target.reset();
+}
+
+function likeComment(btn) {
+  const span = btn.querySelector("span");
+  if (!btn.classList.contains("liked")) {
+    btn.classList.add("liked");
+    btn.querySelector("i").className = "fa-solid fa-thumbs-up";
+    span.innerText = parseInt(span.innerText || "0") + 1;
+  }
+}

@@ -41,6 +41,7 @@
         <a href="#articles" class="nav-link active">Articles</a>
         <a href="#podcast" class="nav-link">Podcast & Video</a>
         <a href="#reports" class="nav-link">Special Reports</a>
+        <a href="#opinions" class="nav-link">Public Opinion</a>
         <a href="#about" class="nav-link">Editorial Creed</a>
         <a href="#subscribe" class="nav-cta">Subscribe</a>
       </nav>
@@ -362,6 +363,156 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- Public Opinion & Community Comments Section -->
+  <section class="opinions-section" id="opinions">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="flex-between">
+          <div>
+            <span class="section-kicker">Citizen Voices & Deliberation</span>
+            <h2>Public Opinion & Community Feedback</h2>
+          </div>
+          <span class="pulse-status-badge"><i class="fa-solid fa-comments"></i> Live Community Discussion</span>
+        </div>
+        <p class="subtext">Share your ground experiences on student housing, digital protests, women's safety, or cloud careers. Moderated for respect and authentic truth.</p>
+      </div>
+
+      <!-- Live Opinion Poll -->
+      <div class="poll-card">
+        <div class="poll-header">
+          <span class="poll-badge"><i class="fa-solid fa-square-poll-vertical"></i> Weekly Reader Poll</span>
+          <h3>What is the most urgent reform needed for student accommodation safety in Delhi?</h3>
+        </div>
+        <div class="poll-options" id="pollOptions">
+          <button class="poll-btn" onclick="votePoll('fire')">
+            <span class="poll-text">Mandatory Fire Clearances & Structural Audits</span>
+            <span class="poll-pct" id="pct-fire">48%</span>
+            <div class="poll-bar" id="bar-fire" style="width: 48%;"></div>
+          </button>
+          <button class="poll-btn" onclick="votePoll('police')">
+            <span class="poll-text">Police Verification & Online Portal Registration</span>
+            <span class="poll-pct" id="pct-police">24%</span>
+            <div class="poll-bar" id="bar-police" style="width: 24%;"></div>
+          </button>
+          <button class="poll-btn" onclick="votePoll('rent')">
+            <span class="poll-text">Subsidized Student Hostels & Fair Rent Caps</span>
+            <span class="poll-pct" id="pct-rent">28%</span>
+            <div class="poll-bar" id="bar-rent" style="width: 28%;"></div>
+          </button>
+        </div>
+        <div class="poll-footer">
+          <span id="pollVoteCount"><i class="fa-solid fa-users"></i> 342 Verified Votes Recorded</span>
+          <span class="poll-note">Select an option to register your vote</span>
+        </div>
+      </div>
+
+      <!-- Comments Grid -->
+      <div class="comments-layout">
+        <!-- Comment Input Box -->
+        <div class="comment-input-card">
+          <h4><i class="fa-regular fa-comment-dots"></i> Add Your Perspective</h4>
+          <p class="subtext">Your voice matters. Contribute your perspective or ground experience.</p>
+          <form id="commentForm" onsubmit="handleCommentSubmit(event)">
+            <div class="form-group">
+              <label>Your Name / Pseudonym</label>
+              <input type="text" id="commenterName" placeholder="e.g. Ananya S., DU Student" required>
+            </div>
+            <div class="form-group">
+              <label>Regarding Story</label>
+              <select id="commentTopic" class="styled-select" required>
+                <option value="From Memes to Movements">From Memes to Movements</option>
+                <option value="Safer PGs for Students">Safer PGs for Students</option>
+                <option value="Cloud & AI Podcast Interview">Cloud & AI Podcast Interview</option>
+                <option value="Women's Safety Field Reel">Women's Safety Field Reel</option>
+                <option value="General Editorial Feedback">General Editorial Feedback</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Your Comment / Opinion</label>
+              <textarea id="commentText" rows="4" placeholder="Share your insights, ground reports, or constructive questions..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit full-width"><i class="fa-solid fa-paper-plane"></i> Publish Public Opinion</button>
+          </form>
+        </div>
+
+        <!-- Live Comments Feed -->
+        <div class="comments-feed">
+          <div class="feed-header">
+            <h4>Live Deliberations (<span id="commentCounter">3</span>)</h4>
+            <span class="filter-note">Sorted by most recent</span>
+          </div>
+
+          <div class="comments-list" id="commentsList">
+            
+            <!-- Comment 1 -->
+            <div class="comment-item">
+              <div class="comment-top">
+                <div class="commenter-meta">
+                  <span class="commenter-avatar"><i class="fa-solid fa-user"></i></span>
+                  <div>
+                    <strong>Rohan Mukherjee</strong>
+                    <span class="comment-target">on <em>Safer PGs for Students</em></span>
+                  </div>
+                </div>
+                <span class="comment-time">2 hours ago</span>
+              </div>
+              <p class="comment-body">
+                The Satya Niketan tragedy was entirely preventable. PG owners in South Delhi pack 3 to 4 students into 10x10 rooms with zero ventilation or emergency escapes. Strict structural audits and rent controls must be enforced immediately.
+              </p>
+              <div class="comment-actions">
+                <button class="like-btn" onclick="likeComment(this)"><i class="fa-regular fa-thumbs-up"></i> <span>28</span> Helpful</button>
+                <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Student Tenant</span>
+              </div>
+            </div>
+
+            <!-- Comment 2 -->
+            <div class="comment-item">
+              <div class="comment-top">
+                <div class="commenter-meta">
+                  <span class="commenter-avatar"><i class="fa-solid fa-user"></i></span>
+                  <div>
+                    <strong>Pooja Deshmukh</strong>
+                    <span class="comment-target">on <em>From Memes to Movements</em></span>
+                  </div>
+                </div>
+                <span class="comment-time">5 hours ago</span>
+              </div>
+              <p class="comment-body">
+                Loved Kinjal's point on humour as an entry point. Memes get shared fast, but the transition from a viral reel to sustained public pressure at Jantar Mantar is what truly forces institutions to answer.
+              </p>
+              <div class="comment-actions">
+                <button class="like-btn" onclick="likeComment(this)"><i class="fa-regular fa-thumbs-up"></i> <span>41</span> Helpful</button>
+                <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Reader</span>
+              </div>
+            </div>
+
+            <!-- Comment 3 -->
+            <div class="comment-item">
+              <div class="comment-top">
+                <div class="commenter-meta">
+                  <span class="commenter-avatar"><i class="fa-solid fa-user"></i></span>
+                  <div>
+                    <strong>Arjun Patel</strong>
+                    <span class="comment-target">on <em>Cloud & AI Podcast Interview</em></span>
+                  </div>
+                </div>
+                <span class="comment-time">1 day ago</span>
+              </div>
+              <p class="comment-body">
+                Praveen sir's advice on customer empathy and stepping out of comfort zones hit home. Great questions by Simmi and Aashbhi—very practical advice for engineers stepping into AI and cloud infrastructure.
+              </p>
+              <div class="comment-actions">
+                <button class="like-btn" onclick="likeComment(this)"><i class="fa-regular fa-thumbs-up"></i> <span>19</span> Helpful</button>
+                <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Reader</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
   </section>
