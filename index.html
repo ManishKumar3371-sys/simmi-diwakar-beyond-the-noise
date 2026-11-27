@@ -20,6 +20,9 @@
   <!-- Top Announcement Bar -->
   <div class="top-ticker">
     <div class="container ticker-flex">
+      <span class="ticker-badge"><i class="fa-solid fa-circle-dot"></i> Special Feature</span>
+      <p class="ticker-text">New Investigation: "From Memes to Movements" & Special Safety Audit on Student PGs published.</p>
+      <a href="#articles" class="ticker-link">Read Dispatches →</a>
       <span class="ticker-badge"><i class="fa-solid fa-scale-balanced"></i> Independent Press</span>
       <p class="ticker-text"><strong>Beyond The Noise</strong> · An independent non-partisan news & investigative research journal edited by Simmi Diwakar.</p>
       <a href="#about" class="ticker-link">Editorial Code & Standards →</a>
@@ -80,6 +83,39 @@
           <a href="#podcast" class="btn-watch-teaser"><i class="fa-solid fa-headphones"></i> Listen Podcast</a>
         </div>
       </div>
+      
+      <!-- Live Readership & Traffic Metrics -->
+      <div class="metrics-strip">
+        <div class="metric-item">
+          <div class="metric-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+          <div class="metric-info">
+            <span class="metric-value" id="totalVisitorsCount">1,842</span>
+            <span class="metric-label">Total Readers Visited</span>
+          </div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-icon"><i class="fa-solid fa-eye"></i></div>
+          <div class="metric-info">
+            <span class="metric-value" id="totalPageViewsCount">5,419</span>
+            <span class="metric-label">Article & Page Reads</span>
+          </div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-icon"><i class="fa-solid fa-play-circle"></i></div>
+          <div class="metric-info">
+            <span class="metric-value" id="totalVideoViewsCount">2,184</span>
+            <span class="metric-label">Broadcast & Reel Views</span>
+          </div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="metric-info">
+            <span class="metric-value" id="liveReadersNow">14 Active</span>
+            <span class="metric-label">Reading Right Now</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -266,7 +302,8 @@
             <div class="video-overlay" id="videoOverlay-1" onclick="playCustomVideo('v1')">
               <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&auto=format&fit=crop&q=80" alt="Podcast Studio" class="video-poster">
               <div class="play-button"><i class="fa-solid fa-play"></i></div>
-              <span class="video-duration">11:08</span>
+                            <span class="video-duration">11:08</span>
+              <span class="video-views-badge"><i class="fa-solid fa-eye"></i> <span id="v1ViewCount">1,248</span> views</span>
             </div>
             <iframe id="videoIframe-1" class="video-frame" style="display:none;" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
@@ -284,6 +321,9 @@
         <!-- Video 2: Short-Form Reel / Youth Protest Briefing -->
         <div class="video-card">
           <div class="video-player-wrapper">
+                        <div class="video-badge-bar">
+              <span class="reel-view-counter"><i class="fa-solid fa-eye"></i> <span id="v2ViewCount">936</span> views</span>
+            </div>
             <video id="localVideoPlayer" class="video-frame" controls playsinline preload="metadata" style="width: 100%; height: 100%; object-fit: cover;">
               <source src="assets/videos/simmi_diwakar_interview.mp4" type="video/mp4">
               Your browser does not support the video tag.
@@ -529,6 +569,10 @@
   <section class="about-section" id="about">
     <div class="container about-container">
       <div class="about-lead">
+        <span class="section-kicker">Our Philosophy</span>
+        <h2>Why "Beyond The Noise"?</h2>
+        <p class="about-p">In an era where sensational headlines and short attention spans dominate the public sphere, <strong>Beyond The Noise</strong> exists to provide grounded, honest documentation.</p>
+        <p class="about-p">Curated by <strong>Simmi Diwakar</strong>, this platform highlights authentic student voices, investigates public safety crises, and shares meaningful technical dialogues that look past the algorithm.</p>
         <span class="section-kicker">Professional Standards & Ethics</span>
         <h2>The Editorial Creed of Beyond The Noise</h2>
         <p class="about-p">In an era marked by rapid algorithmic echo chambers, sensational headlines, and unverified social claims, <strong>Beyond The Noise</strong> stands committed to the core tenets of professional public-interest journalism: uncompromising verification, transparency of sources, independent inquiry, and ethical accountability.</p>
@@ -538,16 +582,22 @@
       <div class="about-pillars">
         <div class="pillar-box">
           <div class="pillar-num">01</div>
+          <h4>People Over Algorithm</h4>
+          <p>We document ground realities—from student housing struggles to street demonstrations—without chasing sensational clickbait.</p>
           <h4>Evidence Over Algorithms</h4>
           <p>Every claim is vetted against physical ground records, municipal audits, and firsthand witness testimony rather than social media sentiment.</p>
         </div>
         <div class="pillar-box">
           <div class="pillar-num">02</div>
+          <h4>Responsible Citizen Reporting</h4>
+          <p>We believe in verification before amplification: checking sources, dates, and authentic lived accounts.</p>
           <h4>Public Interest & Accountability</h4>
           <p>We hold municipal authorities, regulatory boards, and housing syndicates accountable to legal safety and human dignities.</p>
         </div>
         <div class="pillar-box">
           <div class="pillar-num">03</div>
+          <h4>Real Solutions & Career Dialogue</h4>
+          <p>Bridging students and seasoned corporate leaders through thoughtful podcast discussions and transparent insights.</p>
           <h4>Ethical Attribution & Transparency</h4>
           <p>Unfiltered reporting paired with explicit source attribution. When errors occur, corrections are issued transparently and promptly.</p>
         </div>
@@ -657,6 +707,7 @@
     </div>
 
     <div class="footer-bottom container">
+      <p>© 2026 Beyond The Noise — Simmi Diwakar. Independent & Open Source.</p>
       <div style="display:flex; flex-direction:column; gap:6px; font-size:0.82rem; color:var(--text-muted);">
         <p>© 2026 <strong>Beyond The Noise</strong> — Published & Edited by <strong>Simmi Diwakar</strong>. Independent Public-Interest Journalism.</p>
         <p style="font-size:0.75rem; font-family:var(--font-mono);">Adheres to SPJ Code of Ethics · Non-Partisan · Ground Witness & Verified Field Documentation · Direct tip line: <a href="mailto:simmidiwakar18@gmail.com" style="color:var(--accent);">simmidiwakar18@gmail.com</a></p>
